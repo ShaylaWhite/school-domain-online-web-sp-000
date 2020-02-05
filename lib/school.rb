@@ -1,4 +1,3 @@
-require "pry"
 class School
 
       attr_reader :roster
@@ -10,23 +9,19 @@ class School
       def add_student(name, grade)
         # ||= or equals
         @roster[grade] ||= []
-        @roster[grade].push(name)
+        @roster[grade] << name
+        
       end
-
       def grade(grade)
         @roster[grade]
       end
-
-      def sort
-
-         @roster.values.each {|x| x.sort!}
+  def sort
+    
+             @roster.values.each {|x| x.sort!}
          @roster
-         #@roster.values.sort
-        # roster_sorted = @roster
-        # roster_sorted.sort
+        
 
-
-        #binding.pry
-
+  end
       end
-end
+    
+ 
